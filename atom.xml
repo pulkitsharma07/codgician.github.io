@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Codgician</title>
+  
+  <subtitle>Code and mogic.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://codgician.github.io/"/>
+  <updated>2017-12-16T04:04:04.943Z</updated>
+  <id>https://codgician.github.io/</id>
+  
+  <author>
+    <name>Jimmy Zhang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HDU 2017程序设计新生赛解题报告</title>
+    <link href="https://codgician.github.io/2017/11/29/hdu-freshman-cup-2017/"/>
+    <id>https://codgician.github.io/2017/11/29/hdu-freshman-cup-2017/</id>
+    <published>2017-11-29T07:11:00.000Z</published>
+    <updated>2017-12-16T04:04:04.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;2017 新生赛真是大爆炸啊，&lt;s&gt;还差点被小学生吊打&lt;/s&gt;……&lt;/p&gt;
+&lt;p&gt;可能是我在比赛的时候带错了零食吧（以后再也不做这个死了），在吃
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="ACM-ICPC" scheme="https://codgician.github.io/tags/ACM-ICPC/"/>
+    
+      <category term="Algorithm" scheme="https://codgician.github.io/tags/Algorithm/"/>
+    
+      <category term="Contest" scheme="https://codgician.github.io/tags/Contest/"/>
+    
+      <category term="HDU" scheme="https://codgician.github.io/tags/HDU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NOIP 2005 - 过河</title>
+    <link href="https://codgician.github.io/2017/11/07/noip-2005-river/"/>
+    <id>https://codgician.github.io/2017/11/07/noip-2005-river/</id>
+    <published>2017-11-07T04:22:00.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;题面&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题面&quot;&gt;&lt;/a&gt; 题面&lt;/h1&gt;
+&lt;p&gt;注：数据范围中的 109 实际上是 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="ACM-ICPC" scheme="https://codgician.github.io/tags/ACM-ICPC/"/>
+    
+      <category term="Dynamic Programming" scheme="https://codgician.github.io/tags/Dynamic-Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈递推</title>
+    <link href="https://codgician.github.io/2017/10/28/recursion-algorithm/"/>
+    <id>https://codgician.github.io/2017/10/28/recursion-algorithm/</id>
+    <published>2017-10-28T14:43:10.000Z</published>
+    <updated>2017-12-16T04:04:04.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;若干天前在知乎上看到 &lt;strong&gt;&lt;a href=&quot;https://www.zhihu.com/people/anchor89&quot; targe
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Computational Thinking" scheme="https://codgician.github.io/tags/Computational-Thinking/"/>
+    
+      <category term="ACM-ICPC" scheme="https://codgician.github.io/tags/ACM-ICPC/"/>
+    
+      <category term="Recursion" scheme="https://codgician.github.io/tags/Recursion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>水题中的教训</title>
+    <link href="https://codgician.github.io/2017/10/08/orz-orz-orz/"/>
+    <id>https://codgician.github.io/2017/10/08/orz-orz-orz/</id>
+    <published>2017-10-08T07:53:10.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;在 HDU，想报名进 ACM 集训队水水都有条件，不在 HDUOJ 上水上几十道题连报名考试的机会都木有……于是为例尽快达到要求题量我就趁国庆的
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="ACM-ICPC" scheme="https://codgician.github.io/tags/ACM-ICPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello HDU!</title>
+    <link href="https://codgician.github.io/2017/09/15/hello-hdu/"/>
+    <id>https://codgician.github.io/2017/09/15/hello-hdu/</id>
+    <published>2017-09-15T13:10:08.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;前几天，看到了 ice1000 同学的一篇博文&lt;a href=&quot;http://ice1000.org/2017/08/30/HowTimeFli
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://codgician.github.io/categories/Life/"/>
+    
+    
+      <category term="Life" scheme="https://codgician.github.io/tags/Life/"/>
+    
+      <category term="HDU" scheme="https://codgician.github.io/tags/HDU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈POSIX系统的权限管理设计</title>
+    <link href="https://codgician.github.io/2017/09/04/posix-permission-system/"/>
+    <id>https://codgician.github.io/2017/09/04/posix-permission-system/</id>
+    <published>2017-09-04T15:00:10.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;经t123yh蛊惑决定在Codgic vnext中模仿一下POSIX的权限设计，结果自己想当然地写出来了一大坨翔 😕。于是还是赶紧提高一下自己
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Codgic" scheme="https://codgician.github.io/tags/Codgic/"/>
+    
+      <category term="Unix" scheme="https://codgician.github.io/tags/Unix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>玩玩身份证</title>
+    <link href="https://codgician.github.io/2017/09/01/learning-more-about-id-card-number/"/>
+    <id>https://codgician.github.io/2017/09/01/learning-more-about-id-card-number/</id>
+    <published>2017-09-01T15:00:10.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;最近边写 &lt;a href=&quot;https://github.com/codgician/codgic-api&quot; target=&quot;_blank&quot; r
+      
+    
+    </summary>
+    
+      <category term="Entertainment" scheme="https://codgician.github.io/categories/Entertainment/"/>
+    
+    
+      <category term="Identy Card" scheme="https://codgician.github.io/tags/Identy-Card/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算导论 - 计算系统基本思维</title>
+    <link href="https://codgician.github.io/2017/08/19/basics-on-computational-thinking/"/>
+    <id>https://codgician.github.io/2017/08/19/basics-on-computational-thinking/</id>
+    <published>2017-08-19T15:03:10.000Z</published>
+    <updated>2017-12-16T04:04:04.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;开学要考试啊orz……&lt;/p&gt;
+&lt;p&gt;学校推荐预习《计算机与计算思维导论》，然而作死的我却购入了《大学计算机——计算思维导论》（因为更便宜）。作
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Computational Thinking" scheme="https://codgician.github.io/tags/Computational-Thinking/"/>
+    
+      <category term="ACM-ICPC" scheme="https://codgician.github.io/tags/ACM-ICPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乱谈整型与浮点</title>
+    <link href="https://codgician.github.io/2017/08/18/on-int-and-float/"/>
+    <id>https://codgician.github.io/2017/08/18/on-int-and-float/</id>
+    <published>2017-08-18T14:43:10.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;一年没碰 C/C++ 后果然什么都不会了欸，开学考试怎么办啊 orz&lt;/p&gt;
+&lt;p&gt;前几天好友终于也入了 C/C++ 的邪教，问起了几个浮点相关
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Computational Thinking" scheme="https://codgician.github.io/tags/Computational-Thinking/"/>
+    
+      <category term="ACM-ICPC" scheme="https://codgician.github.io/tags/ACM-ICPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Happy birthday!</title>
+    <link href="https://codgician.github.io/2017/05/26/happy-eighteenth-birthday/"/>
+    <id>https://codgician.github.io/2017/05/26/happy-eighteenth-birthday/</id>
+    <published>2017-05-26T05:19:35.000Z</published>
+    <updated>2017-12-16T04:04:04.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;It’s a special day to celebrate, yet with little time left towards College Entrance Examination there is not much to celebrate.&lt;/p&gt;
+&lt;p&gt;I 
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://codgician.github.io/categories/Life/"/>
+    
+    
+      <category term="Life" scheme="https://codgician.github.io/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一不小心进了某邻居的网络</title>
+    <link href="https://codgician.github.io/2017/04/09/accidentally-hacked-neighbors-router/"/>
+    <id>https://codgician.github.io/2017/04/09/accidentally-hacked-neighbors-router/</id>
+    <published>2017-04-09T07:53:10.000Z</published>
+    <updated>2017-12-16T04:04:04.939Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;没想到本博客第一篇稍微带点技术性文章竟然是这个……&lt;/p&gt;
+&lt;p&gt;这件事总的来说也是一年多以前干的了，自从开了博客后一直都想找个时间属文以记之。
+      
+    
+    </summary>
+    
+    
+      <category term="Pwn" scheme="https://codgician.github.io/tags/Pwn/"/>
+    
+      <category term="Router" scheme="https://codgician.github.io/tags/Router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高考导数 - 洛必达法则</title>
+    <link href="https://codgician.github.io/2017/04/08/thoughts-on-senior-3-derivative-problems-4/"/>
+    <id>https://codgician.github.io/2017/04/08/thoughts-on-senior-3-derivative-problems-4/</id>
+    <published>2017-04-08T12:26:59.000Z</published>
+    <updated>2017-12-16T04:04:04.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;分离参数可谓是解决高考导数题目中极为常见的一种基本方法，但很多时候我们却会遇到端点处取值没有意义的情况。这时，我们就需要借助洛必达法则这一高等数
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Maths" scheme="https://codgician.github.io/tags/Maths/"/>
+    
+      <category term="Derivative" scheme="https://codgician.github.io/tags/Derivative/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高考导数 - 对端点效应的优化</title>
+    <link href="https://codgician.github.io/2017/04/08/thoughts-on-senior-3-derivative-problems-3/"/>
+    <id>https://codgician.github.io/2017/04/08/thoughts-on-senior-3-derivative-problems-3/</id>
+    <published>2017-04-08T12:25:20.000Z</published>
+    <updated>2017-12-16T04:04:04.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;挖坑待填……&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;端点效应这个名词也是由《高考数学你真的掌握了吗》系列丛书的《函数》一册提出的。该书
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Maths" scheme="https://codgician.github.io/tags/Maths/"/>
+    
+      <category term="Derivative" scheme="https://codgician.github.io/tags/Derivative/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高考导数 - 优化函数以方便求解</title>
+    <link href="https://codgician.github.io/2017/04/08/thoughts-on-senior-3-derivative-problems-2/"/>
+    <id>https://codgician.github.io/2017/04/08/thoughts-on-senior-3-derivative-problems-2/</id>
+    <published>2017-04-08T12:21:50.000Z</published>
+    <updated>2017-12-16T04:04:04.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;在进入正题前总是忍不住想先扯点其它的……&lt;/p&gt;
+&lt;p&gt;前几周经不住诱惑购入了蔡小雄先生所著的数本高中数学相关的书籍，其中《更高更妙的高中数学 
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Maths" scheme="https://codgician.github.io/tags/Maths/"/>
+    
+      <category term="Derivative" scheme="https://codgician.github.io/tags/Derivative/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高考导数 - “两点”问题</title>
+    <link href="https://codgician.github.io/2017/04/02/thoughts-on-senior-3-derivative-problems/"/>
+    <id>https://codgician.github.io/2017/04/02/thoughts-on-senior-3-derivative-problems/</id>
+    <published>2017-04-02T06:31:20.000Z</published>
+    <updated>2017-12-16T04:04:04.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;4/02更新：修复重要错误，添加一道例题。&lt;br&gt;
+3/26更新：补充新题型，调整分类逻辑，修改排版以方便阅读。&lt;/p&gt;
+&lt;h1 id=&quot;简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;嗯，最近疯狂地迷
+      
+    
+    </summary>
+    
+      <category term="Notes" scheme="https://codgician.github.io/categories/Notes/"/>
+    
+    
+      <category term="Maths" scheme="https://codgician.github.io/tags/Maths/"/>
+    
+      <category term="Derivative" scheme="https://codgician.github.io/tags/Derivative/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://codgician.github.io/2017/02/11/hello-world/"/>
+    <id>https://codgician.github.io/2017/02/11/hello-world/</id>
+    <published>2017-02-11T05:15:08.000Z</published>
+    <updated>2017-12-16T04:04:04.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;p&gt;I have just decided to start a blog in order to share some of my collections, ideas and findings.&lt;/p&gt;
+&lt;p&gt;决定创建一个新博客来分享
+      
+    
+    </summary>
+    
+      <category term="Hello!" scheme="https://codgician.github.io/categories/Hello/"/>
+    
+    
+      <category term="Hello" scheme="https://codgician.github.io/tags/Hello/"/>
+    
+  </entry>
+  
+</feed>

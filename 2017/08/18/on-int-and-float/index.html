@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            乱谈整型与浮点 | 
+        
+        Codgician
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Codgician&#39;s home and lab.">
+    <meta name="keywords" content="Codgician,jimmy19990,Code,Mogic,Blog,Computational Thinking,ACM-ICPC">
+    <meta name="theme-color" content="#1976D2">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #2196F3;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #1976D2 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #1976D2 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #1976D2 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #2196F3;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Codgician">
+    <meta name="msapplication-starturl" content="https://codgician.github.io/2017/08/18/on-int-and-float/">
+    <meta name="msapplication-navbutton-color" content="#1976D2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Codgician">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://codgician.github.io/2017/08/18/on-int-and-float/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="乱谈整型与浮点 | Codgician">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Codgician&#39;s home and lab.">
+    <meta property="og:article:tag" content="Computational Thinking"> <meta property="og:article:tag" content="ACM-ICPC"> 
+
+    
+        <meta property="article:published_time" content="Fri Aug 18 2017 22:43:10 GMT+0800">
+        <meta property="article:modified_time" content="Sat Dec 16 2017 04:04:04 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://codgician.github.io/2017/08/18/on-int-and-float/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://codgician.github.io/2017/08/18/on-int-and-float/index.html",
+    "headline": "乱谈整型与浮点",
+    "datePublished": "Fri Aug 18 2017 22:43:10 GMT+0800",
+    "dateModified": "Sat Dec 16 2017 04:04:04 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Jimmy Zhang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Come what may, I know the way."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Codgician",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Computational Thinking,ACM-ICPCCodgician,jimmy19990,Code,Mogic,Blog",
+    "description": "Codgician&#39;s home and lab.",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-97035940-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x524D;&#x8A00;"></a> &#x524D;&#x8A00;</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#先从整型说起"><span class="post-toc-number">2.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x5148;&#x4ECE;&#x6574;&#x578B;&#x8BF4;&#x8D77;"></a> &#x5148;&#x4ECE;&#x6574;&#x578B;&#x8BF4;&#x8D77;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#无符号整形"><span class="post-toc-number">2.1.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x5F62;"></a> &#x65E0;&#x7B26;&#x53F7;&#x6574;&#x5F62;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#整形"><span class="post-toc-number">2.2.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x6574;&#x5F62;"></a> &#x6574;&#x5F62;</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#再来看看浮点"><span class="post-toc-number">3.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x518D;&#x6765;&#x770B;&#x770B;&#x6D6E;&#x70B9;"></a> &#x518D;&#x6765;&#x770B;&#x770B;&#x6D6E;&#x70B9;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#整体结构"><span class="post-toc-number">3.1.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x6574;&#x4F53;&#x7ED3;&#x6784;"></a> &#x6574;&#x4F53;&#x7ED3;&#x6784;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#指数偏移值"><span class="post-toc-number">3.2.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x6307;&#x6570;&#x504F;&#x79FB;&#x503C;"></a> &#x6307;&#x6570;&#x504F;&#x79FB;&#x503C;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#规约形式与非规约形式"><span class="post-toc-number">3.3.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x89C4;&#x7EA6;&#x5F62;&#x5F0F;&#x4E0E;&#x975E;&#x89C4;&#x7EA6;&#x5F62;&#x5F0F;"></a> &#x89C4;&#x7EA6;&#x5F62;&#x5F0F;&#x4E0E;&#x975E;&#x89C4;&#x7EA6;&#x5F62;&#x5F0F;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#规约形式-normalized-numbers"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x89C4;&#x7EA6;&#x5F62;&#x5F0F;-normalized-numbers"></a> &#x89C4;&#x7EA6;&#x5F62;&#x5F0F; (Normalized numbers)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#非规约形式-denormalized-numbers"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x975E;&#x89C4;&#x7EA6;&#x5F62;&#x5F0F;-denormalized-numbers"></a> &#x975E;&#x89C4;&#x7EA6;&#x5F62;&#x5F0F; (Denormalized numbers)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#特殊值"><span class="post-toc-number">3.4.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x7279;&#x6B8A;&#x503C;"></a> &#x7279;&#x6B8A;&#x503C;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#取值范围-精度和间隙"><span class="post-toc-number">3.5.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x53D6;&#x503C;&#x8303;&#x56F4;-&#x7CBE;&#x5EA6;&#x548C;&#x95F4;&#x9699;"></a> &#x53D6;&#x503C;&#x8303;&#x56F4;&#x3001;&#x7CBE;&#x5EA6;&#x548C;&#x95F4;&#x9699;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#取值范围-range"><span class="post-toc-number">3.5.1.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x53D6;&#x503C;&#x8303;&#x56F4;-range"></a> &#x53D6;&#x503C;&#x8303;&#x56F4; (Range)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#精度-precision-与-间隙-gap"><span class="post-toc-number">3.5.2.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x7CBE;&#x5EA6;-precision-&#x4E0E;-&#x95F4;&#x9699;-gap"></a> &#x7CBE;&#x5EA6; (Precision) &#x4E0E; &#x95F4;&#x9699; (Gap)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#小结"><span class="post-toc-number">4.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x5C0F;&#x7ED3;"></a> &#x5C0F;&#x7ED3;</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考文献"><span class="post-toc-number">5.</span> <span class="post-toc-text"><a class="markdownIt-Anchor" href="#&#x53C2;&#x8003;&#x6587;&#x732E;"></a> &#x53C2;&#x8003;&#x6587;&#x732E;</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                乱谈整型与浮点
+            </p>
+        </div>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jimmy Zhang</strong>
+        <span>Aug 18, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">Read this article on other devices</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1ElEQVR42u3aW27jMBAEwNz/0rsHCFbuHgobRVP6MmKbZNFABvP4+rPy+cLGxsbGxsbGxsZ+JPsrfr5//vs6/9zycoV8l9mZsbGxsTewP/zrj494fR3Jd69Xm50ZGxsbew/7OmjlW14fJd8xYSdnxsbGxsY+STPyBCa/AmxsbGzs8wB2HWCuL6tNXZLX2NjY2NhtgSbntWEvCZw/UEvDxsbGfjy7bfQ+4fUP9LexsbGxH8k+f9oifjuCc9s5sbGxsV/Kvi7lF+GhHMfMS//nDQZsbGzsPeyoyH5T+b699POwh42Njb2Znfy9/cz5Xm34xMbGxt7DbstJd4WZtp2cBD9sbGzsDey8fH9Cza94VmCqAxg2Njb2q9l5mEmSh1kBa1Za+nCh2NjY2MvYCaB9Nx/HSUJg/YNhY2Njr2TPMLPEph3rqdfBxsbGfjW7PdasETsLP3kjARsbG3sn+2QUZpZmzK4jbx5gY2Njb2PPhmBa2En4yUd5PoQ9bGxs7DXs2RBk2yq+q+ifXy42Njb2u9l5ytEWlfKy0WyXPPnBxsbG3sNuA0/e0J01bmepCDY2NvY2dlvubxOJWVP5/AzY2NjY29h5ob8d0MwL/W3ZqBj0wcbGxl7Abkv5s3Zvftw8mYkaxtjY2NgvZc9apyf4JNnIm7vF7tjY2NivZrdDNvmh81TkvLn74V1sbGzsV7PzYJOz88L9rLzVDu5gY2Njb2Dnwzf5pbQNgHZ8swhv2NjY2C9ln7R7Z43h9qJnP0nRFcHGxsb+5ew2GJwP3Lelq9suDhsbG/vV7Fkoygv6eRE/X6dNeLCxsbE3sGdBqw08RUF/Vjxqhy+xsbGxV7Lrgk4c9vJWQVuEwsbGxsY+SgPKcDVrHn/4LjY2NvYC9qy527YHkpQjX+eGSSVsbGzsV7Bnjd7ZgE5eBmpTl//U38bGxsZ+GHvPg42NjY2NjY2Njf2Y5y93hdi7Cpj69wAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ACM-ICPC/">ACM-ICPC</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Computational-Thinking/">Computational Thinking</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/08/18/on-int-and-float/" class="leancloud-views_num" data-flag-title="乱谈整型与浮点">
+     &nbsp;Views
+</span>
+
+            </li>
+        </a>
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=乱谈整型与浮点&url=https://codgician.github.io/2017/08/18/on-int-and-float/index.html&pic=https://codgician.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=乱谈整型与浮点&url=https://codgician.github.io/2017/08/18/on-int-and-float/index.html&via=Jimmy Zhang" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://codgician.github.io/2017/08/18/on-int-and-float/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://codgician.github.io/2017/08/18/on-int-and-float/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://codgician.github.io/2017/08/18/on-int-and-float/index.html&title=乱谈整型与浮点" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Codgician&title=乱谈整型与浮点&summary=Codgician&#39;s home and lab.&pics=https://codgician.github.io/img/favicon.png&url=https://codgician.github.io/2017/08/18/on-int-and-float/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://codgician.github.io/2017/08/18/on-int-and-float/index.html&text=乱谈整型与浮点" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>一年没碰 C/C++ 后果然什么都不会了欸，开学考试怎么办啊 orz</p>
+<p>前几天好友终于也入了 C/C++ 的邪教，问起了几个浮点相关的问题，让我终于意识到深陷现代语言泥潭的我早已忘却这些富有趣味但又基础地不能在基础的知识…… 在网上大量查阅相关资料后决定属文以记之。</p>
+<h1 id="先从整型说起"><a class="markdownIt-Anchor" href="#先从整型说起"></a> 先从整型说起</h1>
+<p><strong>注：本文中默认 int 长度为 32 位。</strong></p>
+<h2 id="无符号整形"><a class="markdownIt-Anchor" href="#无符号整形"></a> 无符号整形</h2>
+<p>这里以 unsigned int 为例（32位）。unsigned int 就是没有符号的 int，在内存里占用 4 Byte，也就是 32 bit。很容易得知其能存储的最小值为 0，最大值则为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>3</mn><mn>2</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>4</mn><mn>2</mn><mn>9</mn><mn>4</mn><mn>9</mn><mn>6</mn><mn>7</mn><mn>2</mn><mn>9</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">2^{32} - 1 = 4294967295</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mrel">=</span><span class="mord mathrm">4</span><span class="mord mathrm">2</span><span class="mord mathrm">9</span><span class="mord mathrm">4</span><span class="mord mathrm">9</span><span class="mord mathrm">6</span><span class="mord mathrm">7</span><span class="mord mathrm">2</span><span class="mord mathrm">9</span><span class="mord mathrm">5</span></span></span></span>。</p>
+<h2 id="整形"><a class="markdownIt-Anchor" href="#整形"></a> 整形</h2>
+<p>int 是带有符号的，因此其所占据的第 0 ~ 31 位中第 31 位是用于存储符号的（0 为正，1 为负）。当然你会问，既然所有位均为 0 时变量的值为 0，那么符号位为 1 时剩余位为 0 表示的又是什么呢？</p>
+<p>这里就要牵扯进 *2 的补码 (2’s complement，又称二补数)*的概念了。</p>
+<blockquote>
+<p>一个数字的二补数就是将该数字作<em>比特反相运算（即一补数或反码）</em>，再将结果加 1。在二补数系统中，一个负数就是用其对应正数的二补数来表示。(<em>Wikipedia</em>，有修改)</p>
+</blockquote>
+<p>为了方便，我们假定一种只有 8 位的整型数据类型来举几个例子：</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th></th>
+<th>=</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1 1 1 1 1 1 1</td>
+<td><strong>127</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0 0 0 0 0 1 0</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0 0 0 0 0 0 1</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0 0 0 0 0 0 0</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1 1 1 1 1 1 1</td>
+<td><strong>-1</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1 1 1 1 1 1 0</td>
+<td><strong>-2</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0 0 0 0 0 0 1</td>
+<td><strong>-127</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0 0 0 0 0 0 0</td>
+<td><strong>-128</strong></td>
+</tr>
+</tbody>
+</table>
+<p>我们可以容易地总结出以下两点：</p>
+<ul>
+<li>取负运算实际上就是取该数的 2 的补码 (~x + 1)。</li>
+<li>有两个数的 2 的补码等于其本身：0 和 -128 (溢出了，所以就变成自己了)。</li>
+</ul>
+<p>至此，我们也应该理解为什么 32 位整型的取值范围是 -2147483648 ~ 2147483647 了。</p>
+<h1 id="再来看看浮点"><a class="markdownIt-Anchor" href="#再来看看浮点"></a> 再来看看浮点</h1>
+<p>在 C 语言中，浮点数的存储均遵循 IEEE 754 标准。我们不妨结合标准内容来对 float 做一番介绍。</p>
+<p><strong>注：并不是在任何情况下浮点数的存储都遵循 IEEE 754 标准！这里仅介绍 IEEE 754标准。</strong></p>
+<h2 id="整体结构"><a class="markdownIt-Anchor" href="#整体结构"></a> 整体结构</h2>
+<p>在 IEEE 754 中，浮点数的存储被划为三个部分：符号位 (sign bit)、阶码 (biased exponent)、尾码 (mantissa)。在单精度中它们的长度分别为 1 bit、8 bit 和 23 bit；双精度中它们的长度分别为 1 bit、11 bit 和 52 bit。</p>
+<p>为了方便展示，不妨从 <a href="https://en.wikipedia.org/wiki/IEEE_754-1985#Representation_of_non-numbers" target="_blank" rel="noopener">Wikipedia</a> 盗两张图下来（遵循  <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike License</a>）：</p>
+<p><strong>单精度</strong></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/IEEE_754_Single_Floating_Point_Format.svg" alt="Single precision"></p>
+<p><strong>双精度</strong></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/IEEE_754_Double_Floating_Point_Format.svg" alt="Double precision"></p>
+<p>我们知道任意一个<strong>二进制</strong>浮点数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span>都可以表示为（科学记数法）：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>=</mo><mo>(</mo><mo>−</mo><mn>1</mn><msup><mo>)</mo><mi>s</mi></msup><mo>∗</mo><mi>M</mi><mo>∗</mo><msup><mn>2</mn><mi>E</mi></msup></mrow><annotation encoding="application/x-tex">V = (-1)^s * M * 2^E
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8913309999999999em;"></span><span class="strut bottom" style="height:1.1413309999999999em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">)</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">s</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">∗</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mbin">∗</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<p>其中，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span></span></span></span> 是<strong>符号位</strong>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> 是有效数字（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>M</mi><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1 \le M &lt; 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">≤</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mrel">&lt;</span><span class="mord mathrm">2</span></span></span></span>），<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> 是指数。</p>
+<p>举个例子，对于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>5</mn><mn>6</mn><mn>2</mn><mn>5</mn></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">{1.5625}_{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span><span class="mord mathrm">6</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">1</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，其二进制表示为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>1</mn><mn>0</mn><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">{1.00101}_{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，用科学记数法表示就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>1</mn><mn>0</mn><mn>1</mn></mrow><mn>2</mn></msub><mo>=</mo><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>1</mn></mrow><mn>2</mn></msub><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">{0.00101}_2 = {1.01}_2 \times 2^{-3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，那么其符号位为 0，有效数字为 1.01，指数为 -3。</p>
+<p>我们很容易发现，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> 的整数部分一定恒为 1，那还存什么存？只用存 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> 的小数部分就行了，所以<strong>尾码</strong>就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">M - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>。</p>
+<h2 id="指数偏移值"><a class="markdownIt-Anchor" href="#指数偏移值"></a> 指数偏移值</h2>
+<p>依据前文对阶码存储结构的介绍，<strong>阶码</strong>看起来就像是一个无符号整数。可惜科学记数法中指数是可以为负数的。怎么办？IEEE 就搞了个 <strong>指数偏移值 (exponent bias) <strong>出来。指数偏移值就是指</strong>浮点数表示法中的指数域的编码值（即阶码的值）为指数的实际值加上某个固定的值（阶码 = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> + 指数偏移值）</strong>。在 IEEE 754 标准中，指数偏移值的固定大小为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mi>e</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{e - 1} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathit">e</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>，其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">e</span></span></span></span> 为储存指数的比特长度。</p>
+<p>例如，在单精度中，阶码位长 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">e</span></span></span></span> 为 8 bit，换算成十进制其可表示范围为 0 ~ 255。依据前文，其指数偏移值是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>8</mn><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>1</mn><mn>2</mn><mn>7</mn></mrow><annotation encoding="application/x-tex">2^{8 - 1} - 1 = 127</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">8</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">7</span></span></span></span>。这样一来，对于 float 类型指数就可取 -127 ~ 128 了。</p>
+<h2 id="规约形式与非规约形式"><a class="markdownIt-Anchor" href="#规约形式与非规约形式"></a> 规约形式与非规约形式</h2>
+<h3 id="规约形式-normalized-numbers"><a class="markdownIt-Anchor" href="#规约形式-normalized-numbers"></a> 规约形式 (Normalized numbers)</h3>
+<p><strong>规约形式的浮点数</strong>指的是<strong>阶码</strong>范围为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>0</mn><mo separator="true">,</mo><msup><mn>2</mn><mrow><mi>e</mi></mrow></msup><mo>−</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(0, 2^{e} - 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathit">e</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span> ，且<strong>尾码</strong>部分**最高有效位（即整数部分）**为 1 的浮点数。也就是说，前文中我们讨论的浮点数都是规约形式的。</p>
+<h3 id="非规约形式-denormalized-numbers"><a class="markdownIt-Anchor" href="#非规约形式-denormalized-numbers"></a> 非规约形式 (Denormalized numbers)</h3>
+<p>为了减小因为<em>下溢 (underflow)</em> 造成的精度损失（换言之，为了使得浮点数可表示的正最小值和负最大值更接近 0），IEEE 754 标准中提出了非规约形式浮点数——用于填补最小正数和最大负数与 0 的距离。</p>
+<p><strong>非规约形式浮点数</strong>的<strong>阶码</strong>为 0，并且<strong>尾码</strong>为非 0。相比规约形式浮点数其最大的不同之处在于，<strong>其尾码隐含的整数部分不再是 1，而变成了 0</strong>。另外，IEEE 754 标准规定，<strong>非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值小 1</strong>。也就是说，最小的规约形式浮点数阶码为 1，指数的实际值  = -126。而非规约形式的单精度浮点数的阶码为 0，依照上述规定其指数的实际值也是  = -126 而不是 -127。</p>
+<p><strong>为什么要这样规定？</strong></p>
+<p>我们首先来看看这种规定下<strong>非规约形式</strong>浮点数能表示的<strong>最大</strong>正浮点数吧（拿<strong>单精度</strong>举个例子，双精度是类似的）：</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000 0000</td>
+<td>111 1111 1111 1111 1111 1111</td>
+</tr>
+</tbody>
+</table>
+<p>不难得出，其实际指数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> = 0 - 126 = -126，其实际有效数字为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn></mrow><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{0.11111111111111111111111}_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。因此，二进制下，其表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>=</mo><msub><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn></mrow><mn>2</mn></msub><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>2</mn><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">V = {0.11111111111111111111111}_2 \times 2^{-126}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">6</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
+<p>而对于<strong>规约形式浮点数</strong>能表示的<strong>最小</strong>正浮点数：</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000 0001</td>
+<td>000 0000 0000 0000 0000 0000</td>
+</tr>
+</tbody>
+</table>
+<p>不难得出，其实际指数为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> = 1 - 127 = -126，其实际有效数字为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{1.00000000000000000000000}_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。因此，二进制下，其表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>=</mo><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><mn>2</mn></msub><mo>∗</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>2</mn><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">V = {1.00000000000000000000000}_2 * 2^{-126}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">∗</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">6</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
+<p>不难发现在这种规定下，<strong>最大非规约形式浮点数和最小非规约形式浮点数是连续的</strong>。这也是该规定出现的原因。</p>
+<h2 id="特殊值"><a class="markdownIt-Anchor" href="#特殊值"></a> 特殊值</h2>
+<p>另外，在标准中也定义了几个特殊值：</p>
+<ul>
+<li>当<strong>阶码</strong>和<strong>尾码</strong>均为 0 时，浮点数表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pm 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">±</span><span class="mord mathrm">0</span></span></span></span>；</li>
+<li>当<strong>阶码</strong>为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mi>e</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{e} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathit">e</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>且<strong>尾码</strong>为 0 时，浮点数表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\pm \infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">±</span><span class="mord mathrm">∞</span></span></span></span>；</li>
+<li>当<strong>阶码</strong>为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^e - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> 且<strong>尾码</strong>非 0 时，浮点数表示的实际值为 NaN (Not a Number)。</li>
+</ul>
+<p>NaN 是什么？可以吃吗？</p>
+<p>当然不能。NaN 往往出现于一些无效的计算结果。比如说，对负数进行求平方根运算，返回的结果就是 NaN。</p>
+<h2 id="取值范围-精度和间隙"><a class="markdownIt-Anchor" href="#取值范围-精度和间隙"></a> 取值范围、精度和间隙</h2>
+<p>注：本节主要讨论单精度浮点数的取值范围与精度。双精度与之类似，所以请读者自行推导。</p>
+<h3 id="取值范围-range"><a class="markdownIt-Anchor" href="#取值范围-range"></a> 取值范围 (Range)</h3>
+<p>前文中已经介绍过单精度浮点数在存储中的大致结构了。我们先就<strong>正浮点数</strong>做一下分析：</p>
+<p><strong>单精度浮点数能表示的最小正值（非规约形式）</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000 0000</td>
+<td>000 0000 0000 0000 0000 0001</td>
+</tr>
+</tbody>
+</table>
+<p>不难得出，不难得出，其实际指数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> = 0 - 126 = -126，其实际有效数字为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>1</mn></mrow><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{0.00000000000000000000001}_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。因此，二进制下，其表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>=</mo><msub><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>1</mn></mrow><mn>2</mn></msub><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>2</mn><mn>6</mn></mrow></msup><mo>≈</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>4</mn><mn>0</mn><mn>1</mn><mn>3</mn><mn>0</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>4</mn><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">V = {0.00000000000000000000001}_2 \times 2^{-126} \approx 1.40130 \times 10^{-45}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">6</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≈</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">4</span><span class="mord mathrm">5</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
+<p><strong>单精度浮点数能表示的最小正值（规约形式）</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000 0001</td>
+<td>000 0000 0000 0000 0000 0000</td>
+</tr>
+</tbody>
+</table>
+<p>不难得出，其实际指数为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> = 1 - 127 = -126，其实际有效数字为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{1.00000000000000000000000}_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。因此，二进制下，其表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>=</mo><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><mn>2</mn></msub><mo>∗</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>2</mn><mn>6</mn></mrow></msup><mo>≈</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>7</mn><mn>5</mn><mn>4</mn><mn>9</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>3</mn><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">V = {1.00000000000000000000000}_2 * 2^{-126} \approx 1.17549 \times 10^{-38}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">∗</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">6</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≈</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">7</span><span class="mord mathrm">5</span><span class="mord mathrm">4</span><span class="mord mathrm">9</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">3</span><span class="mord mathrm">8</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
+<p><strong>单精度浮点数能表示的最大正值</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1111 1110</td>
+<td>111 1111 1111 1111 1111 1111</td>
+</tr>
+</tbody>
+</table>
+<p>不难得出，不难得出，其实际指数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> = 254 - 127 = 127，其实际有效数字为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn></mrow><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{1.11111111111111111111111}_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。因此，二进制下，其表示的实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>=</mo><msub><mrow><mn>1</mn><mi mathvariant="normal">.</mi><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn><mn>1</mn></mrow><mn>2</mn></msub><mo>×</mo><msup><mn>2</mn><mrow><mn>1</mn><mn>2</mn><mn>7</mn></mrow></msup><mo>≈</mo><mn>3</mn><mi mathvariant="normal">.</mi><mn>4</mn><mn>0</mn><mn>2</mn><mn>8</mn><mn>2</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mn>3</mn><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">V = {1.11111111111111111111111}_2 \times 2^{127} \approx 3.40282 \times 10^{38}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">7</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≈</span><span class="mord mathrm">3</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">8</span><span class="mord mathrm">2</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">8</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
+<p>对于负数也是一样的，这里也不做过多讨论。</p>
+<p>双精度也是与此类似的，这里只给出如下结论：</p>
+<p><strong>双精度浮点数能表示的最小正值（非规约形式）</strong>： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>0</mn><mn>7</mn><mn>4</mn></mrow></msup><mo>≈</mo><mn>4</mn><mi mathvariant="normal">.</mi><mn>9</mn><mn>4</mn><mn>0</mn><mn>6</mn><mn>6</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>3</mn><mn>2</mn><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-1074} \approx 4.94066 \times 10^{-324}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">7</span><span class="mord mathrm">4</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≈</span><span class="mord mathrm">4</span><span class="mord mathrm">.</span><span class="mord mathrm">9</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">6</span><span class="mord mathrm">6</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">3</span><span class="mord mathrm">2</span><span class="mord mathrm">4</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></p>
+<p><strong>双精度浮点数能表示的最小正值（规约形式）</strong>： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>0</mn><mn>2</mn><mn>2</mn></mrow></msup><mo>≈</mo><mn>2</mn><mi mathvariant="normal">.</mi><mn>2</mn><mn>2</mn><mn>5</mn><mn>0</mn><mn>7</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>3</mn><mn>0</mn><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-1022} \approx 2.22507 \times 10^{-308}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≈</span><span class="mord mathrm">2</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mord mathrm">7</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></p>
+<p><strong>双精度浮点数能表示的最大正值</strong>： <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo>−</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>5</mn><mn>3</mn></mrow></msup><mo>)</mo><mo>×</mo><msup><mn>2</mn><mrow><mn>1</mn><mn>0</mn><mn>2</mn><mn>4</mn></mrow></msup><mo>≈</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>7</mn><mn>9</mn><mn>7</mn><mn>6</mn><mn>9</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mn>3</mn><mn>0</mn><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(1 - 2^{-53}) \times 2^{1024} \approx 1.79769 \times 10^{308}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">−</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">5</span><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mbin">×</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">4</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≈</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">7</span><span class="mord mathrm">9</span><span class="mord mathrm">7</span><span class="mord mathrm">6</span><span class="mord mathrm">9</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></p>
+<h3 id="精度-precision-与-间隙-gap"><a class="markdownIt-Anchor" href="#精度-precision-与-间隙-gap"></a> 精度 (Precision) 与 间隙 (Gap)</h3>
+<p>首先摘抄一段来自 <a href="https://en.wikipedia.org/wiki/IEEE_754-1985#Range_and_precision" target="_blank" rel="noopener">Wikipedia</a> 的原文：</p>
+<blockquote>
+<p><strong>Precision</strong> is defined as the minimum difference between two successive mantissa representations; thus it is a function only in the mantissa; while the <strong>gap</strong> is defined as the difference between two successive numbers.</p>
+</blockquote>
+<p>简单翻译过来就是（不知道翻译错没有）：</p>
+<p><strong>精度</strong>的定义为两个连续尾数表示之间的最小差值，因此它只是存在于尾数中的功能。而<strong>间隙</strong>被定义为两个连续数字之间的差值。</p>
+<p>对于<strong>精度</strong>，我们已经可以很容易地回答这个问题了。对于单精度浮点数，尾码有23位。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mn>3</mn></mrow></msup><mo>=</mo><mn>8</mn><mn>3</mn><mn>8</mn><mn>8</mn><mn>6</mn><mn>0</mn><mn>8</mn></mrow><annotation encoding="application/x-tex">2^{23} = 8388608</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathrm">8</span><span class="mord mathrm">3</span><span class="mord mathrm">8</span><span class="mord mathrm">8</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span></span></span></span>，因此<strong>单精度浮点数最长（不完整地）可存储小数点后 7 位，但只能完整地存储小数点后 6 位</strong>。</p>
+<p>而对于<strong>间隙</strong>出现的原因，我们可以这样理解。</p>
+<p>前面我们提到了浮点数内部存储实际上是二进制科学记数法，我们不难发现尾数是有限位的。当指数越来越大时，相邻两尾数表示的两实际值之间的大小也越来越大。这两实际值之间的差也就是<strong>间隙</strong>。而在间隙之间的数是无法被准确存储下来的。</p>
+<p>我们不妨从 <a href="https://en.wikipedia.org/wiki/IEEE_754-1985#Single_precision" target="_blank" rel="noopener">Wikipedia</a> 摘录一个展示单精度类型在不同指数下相邻两实际值之间的间隙大小的表格。其中最小值和最大值分别代表当实际指数一定时该浮点数可表示的最小十进制数和最大十进制数。</p>
+<table>
+<thead>
+<tr>
+<th><strong>实际指数</strong></th>
+<th><strong>阶码</strong></th>
+<th><strong>最小值</strong></th>
+<th><strong>最大值</strong></th>
+<th><strong>间隙</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>127</td>
+<td>1</td>
+<td>≈ 1.999999880791</td>
+<td>≈ 1.19209e-7</td>
+</tr>
+<tr>
+<td>1</td>
+<td>128</td>
+<td>2</td>
+<td>≈ 3.999999761581</td>
+<td>≈ 2.38419e-7</td>
+</tr>
+<tr>
+<td>2</td>
+<td>129</td>
+<td>4</td>
+<td>≈ 7.999999523163</td>
+<td>≈ 4.76837e-7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>137</td>
+<td>1024</td>
+<td>≈ 2047.999877930</td>
+<td>≈ 1.22070e-4</td>
+</tr>
+<tr>
+<td>11</td>
+<td>138</td>
+<td>2048</td>
+<td>≈ 4095.999755859</td>
+<td>≈ 2.44141e-4</td>
+</tr>
+<tr>
+<td>23</td>
+<td>150</td>
+<td>8388608</td>
+<td>16777215</td>
+<td>1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>151</td>
+<td>16777216</td>
+<td>33554430</td>
+<td>2</td>
+</tr>
+<tr>
+<td>127</td>
+<td>254</td>
+<td>≈ 1.70141e38</td>
+<td>≈ 3.40282e38</td>
+<td>≈ 2.02824e31</td>
+</tr>
+</tbody>
+</table>
+<p>根据表格，当实际指数为 24 时，相邻两数间的差值已经达到了 2 这么大。因此，162777217 实际上是无法用浮点数表示的，因为事实上它的值会丢失精度至 162777216。</p>
+<p>相比单精度，由于双精度的尾数总位数更长，故在指数相同时，双精度数与数之间的间隙会比单精度数更小。下面我们也继续从 <a href="https://en.wikipedia.org/wiki/IEEE_754-1985#Double_precision" target="_blank" rel="noopener">Wikipedia</a> 摘录一个展示双精度类型不同指数下相邻两实际值间间隙的表格：</p>
+<table>
+<thead>
+<tr>
+<th><strong>实际指数</strong></th>
+<th><strong>阶码</strong></th>
+<th><strong>最小值</strong></th>
+<th><strong>最大值</strong></th>
+<th><strong>间隙</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1023</td>
+<td>1</td>
+<td>≈ 1.999999999999999777955</td>
+<td>≈ 2.22045e-16</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1024</td>
+<td>2</td>
+<td>≈ 3.999999999999999555911</td>
+<td>≈ 4.44089e-16</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1025</td>
+<td>4</td>
+<td>≈ 7.999999999999999111822</td>
+<td>≈ 8.88178e-16</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1033</td>
+<td>1024</td>
+<td>≈ 2047.999999999999772626</td>
+<td>≈ 2.27374e-13</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1034</td>
+<td>2048</td>
+<td>≈ 4095.999999999999545253</td>
+<td>≈ 4.54747e-13</td>
+</tr>
+<tr>
+<td>52</td>
+<td>1075</td>
+<td>4503599627370496</td>
+<td>9007199254740991</td>
+<td>1</td>
+</tr>
+<tr>
+<td>53</td>
+<td>1076</td>
+<td>9007199254740992</td>
+<td>18014398509481982</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1023</td>
+<td>2046</td>
+<td>≈ 8.98847e307</td>
+<td>≈ 1.79769e308</td>
+<td>≈ 1.99584e292</td>
+</tr>
+</tbody>
+</table>
+<p>这也完美地解释了前几天在学校的 OJ 上水题有的题明明在单精度取值范围内却没法用单精度 A 掉的原因…… 看起来还是我太弱了 orz。</p>
+<h1 id="小结"><a class="markdownIt-Anchor" href="#小结"></a> 小结</h1>
+<p>懒得写了（逃</p>
+<h1 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h1>
+<p>排序顺序嘛…… 我才不会告诉你是乱序呢。</p>
+<ul>
+<li>可爱的Void（yzh）orz</li>
+<li>维基百科 - <a href="https://zh.wikipedia.org/zh-cn/%E4%BA%8C%E8%A3%9C%E6%95%B8" target="_blank" rel="noopener">补码</a></li>
+<li>维基百科 - <a href="https://zh.wikipedia.org/wiki/IEEE_754" target="_blank" rel="noopener">IEEE 754</a></li>
+<li>Wikipedia - <a href="https://en.wikipedia.org/wiki/IEEE_754-1985" target="_blank" rel="noopener">IEEE 754-1985</a></li>
+<li>adream307 - <a href="http://blog.csdn.net/adream307/article/details/7246993" target="_blank" rel="noopener">float的内存结构</a></li>
+<li>andyhzw - <a href="http://blog.chinaunix.net/uid-28458801-id-3507427.html" target="_blank" rel="noopener">**C/C++中浮点数的存储方式</a></li>
+<li>wenrang - <a href="http://blog.csdn.net/wenrang/article/details/5758759" target="_blank" rel="noopener">浮点数与IEEE浮点标准</a></li>
+</ul>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Unported License</a>.
+                        </strong>
+                        <br>
+                        <strong>Link to this article: </strong><a href="https://codgician.github.io/2017/08/18/on-int-and-float/">https://codgician.github.io/2017/08/18/on-int-and-float/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'codgician',
+        repo: 'codgician.github.io',
+        oauth: {
+            client_id: 'f91be9f9d92518c62fbe',
+            client_secret: '169dea340cd2443f0286affa5f4d8f00c60375e6',
+        },
+    })
+    gitment.render('container')
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/08/19/basics-on-computational-thinking/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/05/26/happy-eighteenth-birthday/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Jimmy Zhang's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        codgician@outlook.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:codgician@outlook.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/11/">November 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">August 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">May 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">February 2017<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Entertainment/">Entertainment<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hello/">Hello!<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Life/">Life<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Notes/">Notes<span class="sidebar_archives-count">11</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/timeline/" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags/" title="Tags">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                Tags
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery/" title="Gallery">
+                
+                    <i class="material-icons sidebar-material-icons">insert_photo</i>
+                
+                Gallery
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about/" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person_pin</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links/" title="Links">
+                
+                    <i class="material-icons sidebar-material-icons">link</i>
+                
+                Links
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                Number of articles
+                <span class="sidebar-badge">16</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            Theme - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://plus.google.com/104323214123424960785" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+        <a href="https://www.v2ex.com/member/codgician" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+                <span class="visuallyhidden">V2EX</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Codgician
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('BLrXcY6IyGP2RVCPSwVLG06I-gzGzoHsz', '8QRfAOYeiRmn73d3lgGPGKjw');
+    </script>
+    <script type="text/ls-javascript" id="leancloud-views-script">
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+
+
+   <!-- Gitment -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
